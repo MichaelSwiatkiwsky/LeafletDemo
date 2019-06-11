@@ -22,6 +22,10 @@
         var lat = coords[0];
         var lng = coords[1];
         map.flyTo([lat, lng]);
+
+        L.marker([lat, lng]).addTo(map)
+            .bindPopup('Another Example Project<br> This is another example popup for the location you just panned to.<br><br><br><br>More example text.')
+            .openPopup();
     };
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
